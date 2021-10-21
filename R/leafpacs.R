@@ -11,7 +11,7 @@
 #' @examples
 #' \dontrun{
 #' results <- leafpacs(data)
-#'}
+#' }
 leafpacs <- function(data) {
 
   # data <- leafpacs:::get_leafpacs()

@@ -19,5 +19,5 @@ leafpacs_indices <- function(data) {
   # Calculate RMNI
   # rmni <- group_by(data, .data$sample_id)
 
- return(data)
+  return(data)
 }

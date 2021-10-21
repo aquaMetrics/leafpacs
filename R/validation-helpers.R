@@ -23,4 +23,3 @@ calculated_values <- function(data) {
 
   return(data)
 }
-

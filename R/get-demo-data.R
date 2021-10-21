@@ -14,12 +14,14 @@ get_demo_data <- function() {
   message("Loading demo data")
   # Load data
   indices <- utils::read.csv(system.file("extdat",
-                                         "MACP_OPEN_DATA_METRICS.csv",
-                                         package = "leafpacs"))
+    "MACP_OPEN_DATA_METRICS.csv",
+    package = "leafpacs"
+  ))
 
   predictors <- utils::read.csv(system.file("extdat",
-                                            "MACP_OPEN_DATA_SITE.csv",
-                                            package = "leafpacs"))
+    "MACP_OPEN_DATA_SITE.csv",
+    package = "leafpacs"
+  ))
 
   # Tidy data
   data <- inner_join(indices, predictors, by = "SITE_ID")
