@@ -6,6 +6,8 @@
 <!-- badges: start -->
 <!-- badges: end -->
 
+THIS PACKAGE IS A WORK IN PROGRESS PLEASE DON’T USE IN PRODUCTION.
+
 The goal of `leafpacs` R package is to calculate river LEAFPACS
 classification.
 

@@ -17,6 +17,7 @@
 #' }
 leafpacs_classify <- function(data) {
   message("Calculating class")
+  message("THIS PACKAGE IS A WORK IN PROGRESS PLEASE DON'T USE IN PRODUCTION.")
   # Calculate EQRs ------------------------------------------------------------
   # RMNI EQR
   data <- data %>% mutate(RMNI_EQR = (.data$RMNI - 10) / (.data$REF_RMNI - 10))
