@@ -1,3 +1,6 @@
+
+# This is the original R script from EA (now converted into package):
+
 MacroP.metrics.f <- readRDS('Data_Input/MAC_OPEN_DATA_METRICS_F.rds')
 MacroP.metrics.f <- MacroP.metrics.f %>% mutate(SITECODE = paste0(SITE_ID))
 #  transform(MacroP.metrics.f, SITE_ID = as.character(SITE_ID))
