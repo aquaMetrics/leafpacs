@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# LEAFPACS
+# LEAFPACS <img src='https://raw.githubusercontent.com/ecodata1/hera/main/man/figures/leafpacs_logo.png' align="right" height="300" />
 
 <!-- badges: start -->
 <!-- badges: end -->
@@ -32,6 +32,7 @@ data <- leafpacs(get_demo_data())
 #> Loading demo data
 #> Calculating indices
 #> Calculating class
+#> THIS PACKAGE IS A WORK IN PROGRESS PLEASE DON'T USE IN PRODUCTION.
 #> Calculating confidence
 #> All done!
 head(data[, c("SAMPLE_ID", "CLASS", "RMHI")])
