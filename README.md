@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# LEAFPACS <img src='https://raw.githubusercontent.com/ecodata1/hera/main/man/figures/leafpacs_logo.png' align="right" height="300" />
+# LEAFPACS <img src='https://github.com/aquaMetrics/leafpacs/raw/main/inst/extdat/images/leafpacs_logo.png' align="right" height="300" />
 
 <!-- badges: start -->
 <!-- badges: end -->
