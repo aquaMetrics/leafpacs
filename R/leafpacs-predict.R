@@ -1,4 +1,4 @@
-#' Predict LEAFPACS RMNI
+#' Predict LEAFPACS nutrient index, taxa, functional groups, and algae
 #'
 #' Function to predict LEAFPACS River Macrophyte Nutrient Index (RMNI), Number
 #' of Functional Groups and add 0.05 for reference algae.

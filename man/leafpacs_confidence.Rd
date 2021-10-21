@@ -2,7 +2,7 @@
 % Please edit documentation in R/leafpacs-confidence.R
 \name{leafpacs_confidence}
 \alias{leafpacs_confidence}
-\title{Confidence of class}
+\title{Calculate Confidence of Class}
 \usage{
 leafpacs_confidence(data)
 }
@@ -13,5 +13,5 @@ leafpacs_confidence(data)
 Data frame containing confidence of class
 }
 \description{
-Confidence of class
+Calculate Confidence of Class
 }

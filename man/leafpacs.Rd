@@ -2,7 +2,7 @@
 % Please edit documentation in R/leafpacs.R
 \name{leafpacs}
 \alias{leafpacs}
-\title{Run all LEAFPACS indices, predictions and classification}
+\title{Run LEAFPACS indices, prediction and classification}
 \usage{
 leafpacs(data)
 }
@@ -13,7 +13,8 @@ leafpacs(data)
 Data frame containing indices, predictions and classification
 }
 \description{
-Run all LEAFPACS indices, predictions and classification
+This is a wrapper function to run all the utility functions together to give
+a final output.
 }
 \examples{
 \dontrun{

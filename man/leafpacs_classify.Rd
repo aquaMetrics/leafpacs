@@ -2,7 +2,7 @@
 % Please edit documentation in R/leafpacs-classify.R
 \name{leafpacs_classify}
 \alias{leafpacs_classify}
-\title{Classify River LEAFPACS}
+\title{Classify LEAFPACS}
 \usage{
 leafpacs_classify(data)
 }

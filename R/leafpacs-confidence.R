@@ -1,13 +1,14 @@
-#' Confidence of class
+#' Calculate Confidence of Class
 #'
 #' @param data Data frame of classification results
 #'
 #' @return Data frame containing confidence of class
 #' @export
+#' @importFrom stats pnorm
 #'
 #' @examples
 leafpacs_confidence <- function(data) {
-
+  message("Calculating confidence")
   # Add columns for confidence and classification results ---------------------
   data$CLASS <- c("BLANK")
   data$SE <- 0

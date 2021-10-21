@@ -11,7 +11,7 @@
 #' indices <- leafpacs_indices(data)
 #' }
 leafpacs_indices <- function(data) {
-
+  message("Calculating indices")
   # Join data to macrophyte scores
   # macrophyte_scores <- leafpacs::macrophyte_scores
   # inner_join(data, macrophyte_scores, by = c('taxon' = 'taxon'))

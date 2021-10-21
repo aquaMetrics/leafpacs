@@ -1,4 +1,7 @@
-#' Run all LEAFPACS indices, predictions and classification
+#' Run LEAFPACS indices, prediction and classification
+#'
+#' This is a wrapper function to run all the utility functions together to give
+#' a final output.
 #'
 #' @param data Data frame of taxonomic or indices results
 #'
@@ -17,5 +20,6 @@ leafpacs <- function(data) {
   data <- leafpacs_predict(data)
   data <- leafpacs_classify(data)
   data <- leafpacs_confidence(data)
+  message("All done!")
   return(data)
 }

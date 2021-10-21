@@ -2,7 +2,7 @@
 % Please edit documentation in R/leafpacs-predict.R
 \name{leafpacs_predict}
 \alias{leafpacs_predict}
-\title{Predict LEAFPACS RMNI}
+\title{Predict LEAFPACS nutrient index, taxa, functional groups, and algae}
 \usage{
 leafpacs_predict(data, reference_algae = 0.05)
 }

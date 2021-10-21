@@ -1,6 +1,7 @@
-#' Validate
+#' Validate input data
 #'
-#' Validate input data for correctness.
+#' Validate input data for correctness and adds calculated variables such log
+#' slope
 #'
 #' @param data Data frame of macrophyte taxonomic data and/or predictors
 #'
@@ -23,6 +24,5 @@ validate <- function(data) {
   # Function to validate each sample individually (removing invalid)
 
   # ...
-  message("Validation complete")
   return(data)
 }

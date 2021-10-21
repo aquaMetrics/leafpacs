@@ -2,7 +2,7 @@
 % Please edit documentation in R/validate.R
 \name{validate}
 \alias{validate}
-\title{Validate}
+\title{Validate input data}
 \usage{
 validate(data)
 }
@@ -13,7 +13,8 @@ validate(data)
 Data frame of validated input data
 }
 \description{
-Validate input data for correctness.
+Validate input data for correctness and adds calculated variables such log
+slope
 }
 \examples{
 \dontrun{

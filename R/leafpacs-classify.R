@@ -1,4 +1,4 @@
-#' Classify River LEAFPACS
+#' Classify LEAFPACS
 #'
 #' Using pre-calculated sample metrics and predicted reference values this
 #' function calculates the EQRs and classification for each sample.
@@ -16,6 +16,7 @@
 #' class <- leafpacs_classify(data)
 #' }
 leafpacs_classify <- function(data) {
+  message("Calculating class")
   # Calculate EQRs ------------------------------------------------------------
   # RMNI EQR
   data <- data %>% mutate(RMNI_EQR = (.data$RMNI - 10) / (.data$REF_RMNI - 10))
