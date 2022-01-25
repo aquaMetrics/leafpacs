@@ -22,7 +22,8 @@ devtools::install_github("aquaMetrics/leafpacs")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example which shows you how to calculate indices,
+predictions and classification:
 
 ``` r
 library(leafpacs)
