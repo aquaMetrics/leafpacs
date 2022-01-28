@@ -2,3 +2,6 @@
 ^\.Rproj\.user$
 ^LICENSE\.md$
 ^README\.Rmd$
+^leafpacs\.Rcheck$
+^leafpacs.*\.tar\.gz$
+^leafpacs.*\.tgz$

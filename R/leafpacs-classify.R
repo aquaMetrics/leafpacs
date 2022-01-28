@@ -169,7 +169,7 @@ leafpacs_classify <- function(data) {
   for (n in 1:nrow(data)) {
     if (data$ALG_EQR[n] < 0.625) {
       data[n, "ALG_EQR_ADJ"] <-
-        ((data$ALG_EQR[n] - 0.625) * 0.2 + 0.8)
+        ((data$ALG_EQR[n] / 0.625) * 0.2)
     }
   }
 
