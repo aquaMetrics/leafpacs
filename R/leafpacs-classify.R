@@ -119,11 +119,11 @@ leafpacs_classify <- function(data) {
   data$EQR_LEAFPACS_Capped[data$EQR_LEAFPACS > 1] <- 1
 
   # Calculate CLASS ----------------------------------------------------------
-  data$CLASS[data$EQR_LEAFPACS < 0.2] <- "BAD"
-  data$CLASS[data$EQR_LEAFPACS < 0.4] <- "POOR"
-  data$CLASS[data$EQR_LEAFPACS < 0.6] <- "MODERATE"
-  data$CLASS[data$EQR_LEAFPACS < 0.8] <- "GOOD"
   data$CLASS[data$EQR_LEAFPACS >= 0.8] <- "HIGH"
+  data$CLASS[data$EQR_LEAFPACS < 0.8] <- "GOOD"
+  data$CLASS[data$EQR_LEAFPACS < 0.6] <- "MODERATE"
+  data$CLASS[data$EQR_LEAFPACS < 0.4] <- "POOR"
+  data$CLASS[data$EQR_LEAFPACS < 0.2] <- "BAD"
 
   return(data)
 }
