@@ -16,10 +16,8 @@ Imports:
     tidyr,
     purrr,
     tibble,
-    hera,
-    eadata
+    hera
 Remotes:
-    aquaMetrics/eadata,
     ecodata1/hera
 RoxygenNote: 7.1.2
 Suggests: 
