@@ -1,5 +1,7 @@
 ---
 output: github_document
+editor_options: 
+  chunk_output_type: console
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -19,7 +21,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-THIS PACKAGE IS A WORK IN PROGRESS PLEASE DON'T USE IN PRODUCTION.
+THIS PACKAGE IS A WORK IN PROGRESS - DON'T USE IN PRODUCTION.
 
 The goal of `leafpacs` R package is to calculate river LEAFPACS classification. 
 
@@ -33,13 +35,28 @@ devtools::install_github("aquaMetrics/leafpacs")
 ```
 ## Example
 
-This is a basic example which shows you how to calculate indices, predictions
-and classification:
+Run classification:
 
-```{r example}
+```{r example, warning=FALSE, message=FALSE}
 library(leafpacs)
-## basic example
-data <- leafpacs(get_demo_data())
-head(data[, c("SAMPLE_ID", "CLASS", "RMHI")])
+data <- leafpacs(taxa_data)
+data[, c("sample_id","eqr", "class","high", "good", "moderate", "poor", "bad")]
 ```
 
+## Data
+
+Enter taxa and percentage cover categories and/or enter pre-calculated `rmni`,
+`rfa_pc` etc values.
+
+Data structure:
+
+1. Book-keeping variables for instance `locations_id`, `date_taken` etc.
+2. Observation variables: `question`, `response`, and `taxon.`
+3. Predictor variables such as `slope`, `dist_from_source` etc.
+
+Example data:
+
+```{r}
+library(leafpacs)
+taxa_data
+```

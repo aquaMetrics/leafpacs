@@ -1,7 +1,12 @@
 test_that("test leafpacs prediction", {
   data <- get_demo_data()
-  output <- leafpacs_predict(data[1, ])
-  expect_equal(round(output$REF_RMNI, 3), 7.421)
-  expect_equal(round(output$REF_TAXA, 2), 8.82)
-  expect_equal(round(output$REF_NFG, 2), 5.63)
+  predicted <- leafpacs_predict(data[data$location_id == 159293,] )
+
+  predicted <- as.numeric(predicted$response)
+  # Round to 2 decimals to match spreadsheet
+  predicted <- round(predicted, 2)
+
+  # Test against values calculated on spreadsheet
+  expect_equal(predicted[1:4], c(8.82, 0.05, 5.63, 7.42))
+
 })

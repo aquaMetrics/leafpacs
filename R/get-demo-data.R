@@ -6,6 +6,7 @@
 #' @importFrom dplyr inner_join select
 #' @importFrom stats complete.cases
 #' @importFrom magrittr `%>%`
+#' @importFrom tibble tibble
 #' @examples
 #' \dontrun{
 #' data <- get_demo_data()
@@ -27,6 +28,7 @@ get_demo_data <- function() {
   data <- inner_join(indices, predictors, by = "SITE_ID")
   data <- select(data, -.data$REPLICATE_CODE)
   data <- data %>% filter(complete.cases(data))
-
+  data <- leafpacs_convert_ea(data)
+  data <- tibble(data)
   return(data)
 }

@@ -7,19 +7,18 @@
 #'
 #' @return Data frame containing indices, predictions and classification
 #' @export
-#'
+#' @importFrom dplyr bind_rows
 #' @examples
 #' \dontrun{
-#' results <- leafpacs(data)
+#' results <- leafpacs(taxa_data)
 #' }
 leafpacs <- function(data) {
-
-  # data <- leafpacs:::get_leafpacs()
   data <- validate(data)
-  data <- leafpacs_indices(data)
-  data <- leafpacs_predict(data)
+  indices <- leafpacs_indices(data)
+  data <- bind_rows(data, indices)
+  predictions <- leafpacs_predict(data)
+  data <- bind_rows(data, predictions)
   data <- leafpacs_classify(data)
   data <- leafpacs_confidence(data)
-  message("All done!")
   return(data)
 }

@@ -12,8 +12,18 @@ Imports:
     dplyr,
     magrittr,
     rlang,
-    lubridate
+    lubridate,
+    tidyr,
+    purrr,
+    tibble,
+    ead,
+    hera
+Remotes:
+    aquaMetrics/eadata,
+    ecodata1/hera
 RoxygenNote: 7.1.2
 Suggests: 
     testthat (>= 3.0.0)
 Config/testthat/edition: 3
+Depends: 
+    R (>= 3.6)
