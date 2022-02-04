@@ -19,6 +19,8 @@ knitr::opts_chunk$set(
 # LEAFPACS <img src='https://github.com/aquaMetrics/leafpacs/raw/main/inst/extdat/images/leafpacs_logo.png' align="right" height="300" />
 
 <!-- badges: start -->
+[![Codecov test coverage](https://codecov.io/gh/aquaMetrics/leafpacs/branch/main/graph/badge.svg)](https://app.codecov.io/gh/aquaMetrics/leafpacs?branch=main)
+[![R-CMD-check](https://github.com/aquaMetrics/leafpacs/workflows/R-CMD-check/badge.svg)](https://github.com/aquaMetrics/leafpacs/actions)
 <!-- badges: end -->
 
 THIS PACKAGE IS A WORK IN PROGRESS - DON'T USE IN PRODUCTION.
