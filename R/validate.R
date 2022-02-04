@@ -13,7 +13,7 @@
 #' data <- validate(1)
 #' }
 validate <- function(data) {
-  message("Validating data")
+  message("Validating data...")
 
   # Function to check for fatal errors i.e. no data entered
 

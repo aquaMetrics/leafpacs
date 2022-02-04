@@ -15,3 +15,7 @@ Data frame containing confidence of class
 \description{
 Calculate Confidence of Class
 }
+\examples{
+data <- data.frame(eqr = c(0.999))
+confidence <- leafpacs_confidence(data)
+}

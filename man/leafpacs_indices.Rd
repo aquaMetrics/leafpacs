@@ -16,7 +16,5 @@ Data frame containing indices
 Calculate river LEAFPACS indices
 }
 \examples{
-\dontrun{
-indices <- leafpacs_indices(data)
-}
+indices <- leafpacs_indices(taxa_data)
 }

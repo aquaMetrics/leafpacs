@@ -18,6 +18,6 @@ a final output.
 }
 \examples{
 \dontrun{
-results <- leafpacs(data)
+results <- leafpacs(taxa_data)
 }
 }
