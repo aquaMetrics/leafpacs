@@ -16,7 +16,8 @@ Imports:
     tidyr,
     purrr,
     tibble,
-    hera
+    hera,
+    eadata
 Remotes:
     aquaMetrics/eadata,
     ecodata1/hera
