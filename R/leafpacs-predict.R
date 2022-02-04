@@ -10,7 +10,7 @@
 #' @return Data frame of reference predictions
 #' @export
 #' @importFrom rlang .data
-#' @importFrom dplyr transmute
+#' @importFrom dplyr transmute mutate_all
 #' @importFrom tidyr pivot_longer
 #'
 #' @examples
@@ -19,14 +19,17 @@
 #' }
 leafpacs_predict <- function(data, reference_algae = 0.05) {
   message("Calculating predictions...")
-  data <- data %>% select(.data$sample_id,
-                          .data$alkalinity,
-                          .data$dist_from_source,
-                          .data$source_altitude,
-                          .data$slope
-                          )
+  data <- data %>% select(
+    .data$sample_id,
+    .data$alkalinity,
+    .data$dist_from_source,
+    .data$source_altitude,
+    .data$slope
+  )
   data <- data %>% distinct()
   data <- data[complete.cases(data), ]
+  data <- data %>% mutate_all(type.convert, as.is = TRUE)
+  data$sample_id <- as.character(data$sample_id)
   # Predict reference RMNI
   prediction <-
     transmute(data,
@@ -51,16 +54,18 @@ leafpacs_predict <- function(data, reference_algae = 0.05) {
   prediction$sample_id <- data$sample_id
 
   # Transform to standard format --------------------------------------------
-  prediction <- prediction %>% distinct() %>% pivot_longer(
-    cols = c(
-      .data$ref_taxa,
-      .data$ref_algae,
-      .data$ref_nfg,
-      .data$ref_rmni
-    ),
-    names_to = "question",
-    values_to = "response"
-  )
+  prediction <- prediction %>%
+    distinct() %>%
+    pivot_longer(
+      cols = c(
+        .data$ref_taxa,
+        .data$ref_algae,
+        .data$ref_nfg,
+        .data$ref_rmni
+      ),
+      names_to = "question",
+      values_to = "response"
+    )
 
   prediction$response <- as.character(prediction$response)
   return(prediction)

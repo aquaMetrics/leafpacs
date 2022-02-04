@@ -18,6 +18,7 @@ validate <- function(data) {
   # Function to check for fatal errors i.e. no data entered
 
   # Function to add calculate variables e.g. log values etc
+  data <- data[data$quality_element == "River Macrophytes",]
   data <- calculated_values(data)
 
 

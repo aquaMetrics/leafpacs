@@ -9,7 +9,4 @@ test_that("leafpacs function", {
   data <- data[!is.na(data$taxon), ]
   data <- leafpacs(data)
 
-  # Test with web
-
-
 })

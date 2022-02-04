@@ -17,7 +17,9 @@ This is a wrapper function to run all the utility functions together to give
 a final output.
 }
 \examples{
-\dontrun{
 results <- leafpacs(taxa_data)
+\dontrun{
+data <- hera::get_data(location_id = 92751)
+class <- leafpacs(data)
 }
 }
