@@ -34,6 +34,7 @@ leafpacs_classify <- function(data) {
     group_by(.data$sample_id) %>%
     pivot_wider(names_from = .data$question, values_from = .data$response) %>%
     ungroup()
+    data[is.na(data)] <- 0
 
   # Calculate EQRs ------------------------------------------------------------
   # RMNI EQR
@@ -135,14 +136,15 @@ leafpacs_classify <- function(data) {
   # Cap final EQR -------------------------------------------------------------
   data$eqr <- data$eqr_leafpacs
   data$eqr[data$eqr_leafpacs > 1] <- 1
+  data$eqr[data$rn_a_taxa < 1] <- NA
 
   # Calculate class ----------------------------------------------------------
-  data$class <- NA
-  data$class[data$eqr_leafpacs >= 0.8] <- "high"
-  data$class[data$eqr_leafpacs < 0.8] <- "good"
-  data$class[data$eqr_leafpacs < 0.6] <- "moderate"
-  data$class[data$eqr_leafpacs < 0.4] <- "poor"
-  data$class[data$eqr_leafpacs < 0.2] <- "bad"
+  data$class <- "unclassifiable"
+  data$class[data$eqr >= 0.8] <- "high"
+  data$class[data$eqr < 0.8] <- "good"
+  data$class[data$eqr < 0.6] <- "moderate"
+  data$class[data$eqr < 0.4] <- "poor"
+  data$class[data$eqr < 0.2] <- "bad"
 
   return(data)
 }

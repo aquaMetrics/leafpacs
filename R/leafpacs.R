@@ -9,8 +9,10 @@
 #' @export
 #' @importFrom dplyr bind_rows
 #' @examples
-#' \dontrun{
 #' results <- leafpacs(taxa_data)
+#' \dontrun{
+#' data <- hera::get_data(location_id = 92751)
+#' class <- leafpacs(data)
 #' }
 leafpacs <- function(data) {
   data <- validate(data)

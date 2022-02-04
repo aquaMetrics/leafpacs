@@ -5,3 +5,5 @@
 ^leafpacs\.Rcheck$
 ^leafpacs.*\.tar\.gz$
 ^leafpacs.*\.tgz$
+^codecov\.yml$
+^\.github$
