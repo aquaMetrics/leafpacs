@@ -23,7 +23,8 @@ Remotes:
 RoxygenNote: 7.1.2
 Suggests: 
     covr,
-    testthat (>= 3.0.0)
+    testthat (>= 3.0.0),
+    pkgdown
 Config/testthat/edition: 3
 Depends: 
     R (>= 3.6)
