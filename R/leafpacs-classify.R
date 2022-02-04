@@ -36,8 +36,6 @@ leafpacs_classify <- function(data) {
     ungroup()
     data[is.na(data)] <- 0
 
-
-
   # Calculate EQRs ------------------------------------------------------------
   # RMNI EQR
   data <- data %>% mutate(rmni_eqr = (.data$rmni - 10) / (.data$ref_rmni - 10))

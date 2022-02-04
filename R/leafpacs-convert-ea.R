@@ -58,6 +58,7 @@ leafpacs_convert_ea <- function(data) {
     values_to = "response"
   )
 
+  data$sample_id <- as.character(data$sample_id)
   data$response <- as.character(data$response)
   return(data)
 

@@ -12,7 +12,7 @@
 #' @importFrom rlang .data
 #' @importFrom dplyr transmute mutate_all
 #' @importFrom tidyr pivot_longer
-#'
+#' @importFrom utils type.convert
 #' @examples
 #' \dontrun{
 #' predictions <- leafpacs_predict(data)
